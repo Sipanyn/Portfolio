@@ -1,0 +1,18 @@
+{
+  "social": {
+    "title": "SOCIAL",
+    "github": "Github",
+    "linkedin": "Linkedin",
+    "instagram": "Instagram"
+  },
+  "menu": {
+    "title": "MENU",
+    "home": "Home",
+    "aboutme": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "connection": {
+    "getInTouch": "GET IN TOUCH"
+  }
+}

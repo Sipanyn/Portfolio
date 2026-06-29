@@ -15,11 +15,12 @@
   font-weight: 100 900;
   font-display: normal;
   src: url("/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
-
-  /* font-family: "BalooBhaijaan";
+}
+@font-face {
+  font-family: "BalooBhaijaan";
   font-style: normal;
   font-weight: 100 900;
   font-display: normal;
   src: url("/fonts/BalooBhaijaan/BalooBhaijaan2-VariableFont_wght.ttf")
-    format("truetype"); */
+    format("truetype");
 }

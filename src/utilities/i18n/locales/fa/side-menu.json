@@ -1,0 +1,18 @@
+{
+  "social": {
+    "title": "شبکه‌های اجتماعی",
+    "github": "گیتهاب",
+    "linkedin": "لینکدین",
+    "instagram": "اینستاگرام"
+  },
+  "menu": {
+    "title": "منو",
+    "home": "خانه",
+    "aboutme": "درباره‌من",
+    "projects": "پروژه‌ها",
+    "contact": "ارتباط با من"
+  },
+  "connection": {
+    "getInTouch": "در ارتباط باشید"
+  }
+}
