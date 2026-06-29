@@ -1,1 +1,25 @@
 @import "tailwindcss";
+@theme {
+  --color-Primary-background: #0f172a;
+  --color-Secondary-background: #1e293b;
+  --color-Main-text: #f8fafc;
+  --color-Secondary-text: #94a3b8;
+  --color-Accent: #3b82f6;
+  --color-Accent-hover: #2563eb;
+  --font-Nunito: "Nunito";
+  --font-BalooBhaijaan: "BalooBhaijaan";
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: normal;
+  src: url("/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+
+  /* font-family: "BalooBhaijaan";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: normal;
+  src: url("/fonts/BalooBhaijaan/BalooBhaijaan2-VariableFont_wght.ttf")
+    format("truetype"); */
+}

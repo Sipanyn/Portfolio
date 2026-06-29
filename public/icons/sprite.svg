@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+<symbol id="heart-armenia" viewBox="0 0 24 24">
+
+  <defs>
+    <mask id="heart-mask">
+      <!-- White = visible -->
+      <rect width="24" height="24" fill="black"/>
+      <path
+        d="M12 21.35
+           l-1.45-1.32
+           C5.4 15.36 2 12.28 2 8.5
+           C2 5.42 4.42 3 7.5 3
+           c1.74 0 3.41.81 4.5 2.09
+           C13.09 3.81 14.76 3 16.5 3
+           C19.58 3 22 5.42 22 8.5
+           c0 3.78-3.4 6.86-8.55 11.54
+           L12 21.35z"
+        fill="white"
+      />
+    </mask>
+  </defs>
+
+  <!-- Armenian stripes masked by heart -->
+  <g mask="url(#heart-mask)">
+    <rect x="0" y="0" width="24" height="8" fill="#D90012"/>
+    <rect x="0" y="8" width="24" height="8" fill="#0033A0"/>
+    <rect x="0" y="16" width="24" height="8" fill="#F2A800"/>
+  </g>
+
+</symbol>
+
+<symbol id="heart-iran" viewBox="0 0 24 24">
+
+  <defs>
+    <mask id="heart-mask-iran">
+      <!-- hide everything -->
+      <rect width="24" height="24" fill="black"/>
+      <!-- show only heart -->
+      <path
+        d="M12 21.35
+           l-1.45-1.32
+           C5.4 15.36 2 12.28 2 8.5
+           C2 5.42 4.42 3 7.5 3
+           c1.74 0 3.41.81 4.5 2.09
+           C13.09 3.81 14.76 3 16.5 3
+           C19.58 3 22 5.42 22 8.5
+           c0 3.78-3.4 6.86-8.55 11.54
+           L12 21.35z"
+        fill="white"
+      />
+    </mask>
+  </defs>
+
+  <!-- Iran stripes masked into heart -->
+  <g mask="url(#heart-mask-iran)">
+    <rect x="0" y="0" width="24" height="8" fill="#239F40"/>
+    <rect x="0" y="8" width="24" height="8" fill="white"/>
+    <rect x="0" y="16" width="24" height="8" fill="#DA0000"/>
+  </g>
+
+</symbol>
+
+
+</svg>
