@@ -10,10 +10,11 @@ const SideMenu = (): React.ReactElement => {
   const isOpen = useSidebarStore((s) => s.isOpen);
   const { t } = useTranslation("sideMenu");
   const isFarsi = i18n.language === "fa";
+
   return (
     <div
       className={clx(
-        "bg-Secondary-background/10 backdrop-blur-lg border border-white/10 absolute top-0 p-14 sm:w-[30%] w-[90%] h-full flex flex-col justify-center transition-all duration-300",
+        "bg-Secondary-background/10 backdrop-blur-lg border border-white/10 absolute top-0 px-14 py-7 sm:w-[30%] w-[90%] h-full flex flex-col justify-around transition-all duration-300",
         isFarsi ? "right-0" : "left-0",
         isOpen
           ? "translate-x-0 opacity-100"
@@ -40,7 +41,7 @@ const SideMenu = (): React.ReactElement => {
         </div>
       </div>
       {/* Get In Touch */}
-      <div className="flex flex-col gap-3 text-Main-text absolute bottom-10 ">
+      <div className="flex flex-col gap-3 text-Main-text">
         <p>{t("connection.getInTouch")}</p>
         <p>sipannyounan@gmail.com</p>
       </div>

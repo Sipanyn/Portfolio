@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import enheaderTitle from "@/utilities/i18n/locales/en/header-title.json";
-import faheaderTitle from "@/utilities/i18n/locales/fa/header-title.json";
+import enheader from "@/utilities/i18n/locales/en/header.json";
+import faheader from "@/utilities/i18n/locales/fa/header.json";
 
 import ensideMenu from "@/utilities/i18n/locales/en/side-menu.json";
 import fasideMenu from "@/utilities/i18n/locales/fa/side-menu.json";
@@ -10,11 +10,11 @@ import fasideMenu from "@/utilities/i18n/locales/fa/side-menu.json";
 i18n.use(initReactI18next).init({
   resources: {
     en: {
-      headerTitle: enheaderTitle,
+      header: enheader,
       sideMenu: ensideMenu,
     },
     fa: {
-      headerTitle: faheaderTitle,
+      header: faheader,
       sideMenu: fasideMenu,
     },
   },
