@@ -17,7 +17,7 @@ const SideMenu = (): React.ReactElement => {
     <div
       key={isFa ? "fa-menu" : "en-menu"}
       className={clx(
-        "bg-Secondary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit inset-0 min-h-dvh flex flex-col justify-between transition-all duration-300 text-sm sm:text-base",
+        "bg-Primary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit inset-0 min-h-dvh flex flex-col justify-around transition-all duration-300 text-sm sm:text-base",
         isFa ? "right-0 " : "left-0 ",
         isOpen
           ? "translate-x-0 opacity-100 visible"
@@ -27,7 +27,7 @@ const SideMenu = (): React.ReactElement => {
       )}
     >
       {/* Close Button */}
-      <div className="text-end">
+      <div className="absolute left-2 top-3">
         <button
           type="button"
           title="Close Menu"
@@ -60,15 +60,35 @@ const SideMenu = (): React.ReactElement => {
         {/* Social */}
         <div className="flex flex-col gap-4 ">
           <p className="mb-3.5 text-Secondary-text">{t("social.title")}</p>
-          <SideBarItem name={t("social.github")} icon="github" />
-          <SideBarItem name={t("social.linkedin")} icon="linkedin" />
-          <SideBarItem name={t("social.instagram")} icon="instagram" />
+          <SideBarItem
+            link="https://github.com/Sipanyn"
+            name={t("social.github")}
+            icon="github"
+          />
+          <SideBarItem
+            link="https://www.linkedin.com/in/sipan-younan-b4955323a"
+            name={t("social.linkedin")}
+            icon="linkedin"
+          />
+          <SideBarItem
+            link="https://www.instagram.com/sipan__yn
+"
+            name={t("social.instagram")}
+            icon="instagram"
+          />
         </div>
       </div>
       {/* Get In Touch */}
       <div className="flex flex-col gap-3 text-Main-text">
         <p>{t("connection.getInTouch")}</p>
-        <p>sipannyounan@gmail.com</p>
+        <p>
+          <a
+            href="mailto:sipannyounan@gmail.com"
+            className=" hover:text-Accent-hover transition-colors"
+          >
+            sipannyounan@gmail.com
+          </a>
+        </p>
       </div>
     </div>
   );
