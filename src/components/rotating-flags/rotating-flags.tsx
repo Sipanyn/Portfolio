@@ -15,7 +15,7 @@ export default function RotatingFlags() {
 
   return (
     // perspective-500 gives depth to the 3D rotation
-    <div className="relative size-5 perspective-normal">
+    <div className="relative size-5 perspective-normal animate-pulse">
       <div
         className={clx(
           "relative w-full h-full duration-700 transform-3d",

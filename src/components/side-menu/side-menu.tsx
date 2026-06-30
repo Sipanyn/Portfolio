@@ -37,16 +37,12 @@ const SideMenu = (): React.ReactElement => {
           <span
             className={clx(
               "absolute left-1/2 top-1/2 w-3/5 h-0.5 rounded-full bg-Main-text duration-300 -translate-x-1/2 -translate-y-1/2 rotate-45",
-              isFa && "md:group-hover:rotate-35",
-              !isFa && "md:group-hover:rotate-55",
             )}
           ></span>
 
           <span
             className={clx(
               "absolute left-1/2 top-1/2 w-3/5 h-0.5 rounded-full bg-Main-text duration-300 -translate-x-1/2 -translate-y-1/2 -rotate-45",
-              isFa && "md:group-hover:-rotate-55",
-              !isFa && "md:group-hover:-rotate-35",
             )}
           ></span>
         </button>
