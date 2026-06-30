@@ -12,17 +12,16 @@ const Header = (): React.ReactElement => {
   const isFa = i18n.language === "fa";
   const { toggleLanguage } = useLanguageStore((s) => s);
   return (
-    <header className="w-full flex justify-between items-center p-5">
+    <header className="flex justify-between items-center p-3 sm:p-5 text-xs sm:text-base">
       {/* Buttons */}
-      <div className="flex justify-between items-center gap-6">
+      <div className="flex justify-between items-center gap-1 sm:gap-6">
         {/* Hamburger Button */}
         <button
           type="button"
           title="Toggle Menu"
           className={clx(
-            "group size-12 relative flex justify-center items-center cursor-pointer",
-            isOpen && !isFa && "translate-x-90",
-            isOpen && isFa && "-translate-x-90",
+            "group size-10 sm:size-12 relative flex justify-center items-center cursor-pointer",
+            isOpen && "opacity-0",
           )}
           onClick={() => toggle()}
         >
@@ -49,8 +48,8 @@ const Header = (): React.ReactElement => {
           type="button"
           title="Change Language"
           className={clx(
-            "group flex items-center gap-2 rounded-xl cursor-pointer",
-            "bg-Accent/5 backdrop-blur-sm px-4 py-2",
+            "group flex items-center gap-2 rounded-xl cursor-pointer ",
+            "bg-Accent/5 backdrop-blur-sm px-2 py-1 sm:px-4 sm:py-2",
             "transition-all duration-300",
             "hover:bg-Accent-hover/10 hover:scale-105",
             "active:scale-95",
@@ -58,7 +57,10 @@ const Header = (): React.ReactElement => {
           )}
         >
           <i className="bi bi-globe text-lg text-white/80 transition-transform duration-300 group-hover:rotate-12"></i>
-          <span className="text-Main-text">{t("language")}</span>
+          <span className="text-Main-text hidden sm:block">
+            {t("language")}
+          </span>
+          <span className="text-Main-text sm:hidden">{t("la")}</span>
         </button>
       </div>
 

@@ -4,26 +4,55 @@ import { useSidebarStore } from "@/stores/useSidebarStore";
 import { clx } from "@/utilities/clx";
 import { useTranslation } from "react-i18next";
 import i18n from "@/utilities/i18n/locales";
+
 import SideBarItem from "../base/sidebar-item/sidebar-item";
 
 const SideMenu = (): React.ReactElement => {
   const isOpen = useSidebarStore((s) => s.isOpen);
   const { t } = useTranslation("sideMenu");
-  const isFarsi = i18n.language === "fa";
+  const toggle = useSidebarStore((s) => s.toggle);
+  const isFa = i18n.language === "fa";
 
   return (
     <div
+      key={isFa ? "fa-menu" : "en-menu"}
       className={clx(
-        "bg-Secondary-background/10 backdrop-blur-lg border border-white/10 absolute top-0 px-14 py-7 sm:w-[30%] w-[90%] h-full flex flex-col justify-around transition-all duration-300",
-        isFarsi ? "right-0" : "left-0",
+        "bg-Secondary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit h-full flex flex-col justify-between transition-all duration-300 text-sm sm:text-base",
+        isFa ? "right-0 " : "left-0 ",
         isOpen
-          ? "translate-x-0 opacity-100"
-          : isFarsi
-            ? "translate-x-full opacity-0"
-            : "-translate-x-full opacity-0",
+          ? "translate-x-0 opacity-100 visible"
+          : isFa
+            ? "translate-x-full opacity-0 "
+            : "-translate-x-full opacity-0 ",
       )}
     >
-      <div className="flex flex-row justify-around">
+      {/* Close Button */}
+      <div className="text-end">
+        <button
+          type="button"
+          title="Close Menu"
+          className="group size-10 sm:size-12 relative  cursor-pointer"
+          onClick={() => toggle()}
+        >
+          <span
+            className={clx(
+              "absolute left-1/2 top-1/2 w-3/5 h-0.5 rounded-full bg-Main-text duration-300 -translate-x-1/2 -translate-y-1/2 rotate-45",
+              isFa && "md:group-hover:rotate-35",
+              !isFa && "md:group-hover:rotate-55",
+            )}
+          ></span>
+
+          <span
+            className={clx(
+              "absolute left-1/2 top-1/2 w-3/5 h-0.5 rounded-full bg-Main-text duration-300 -translate-x-1/2 -translate-y-1/2 -rotate-45",
+              isFa && "md:group-hover:-rotate-55",
+              !isFa && "md:group-hover:-rotate-35",
+            )}
+          ></span>
+        </button>
+      </div>
+
+      <div className="flex flex-row justify-around gap-10 sm:gap-25">
         {/* Menu */}
         <div className="flex flex-col gap-4">
           <p className="mb-3.5 text-Secondary-text">{t("menu.title")}</p>

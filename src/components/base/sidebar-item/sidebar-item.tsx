@@ -9,7 +9,7 @@ type socialItemProps = {
 const SideBarItem = ({ icon, name }: socialItemProps): React.ReactElement => {
   const isFa = i18n.language === "fa";
   return (
-    <div className="group flex flex-row gap-2 items-center text-Main-text  cursor-pointer">
+    <div className="group flex flex-row gap-2 items-center text-Main-text  cursor-pointer text-sm sm:text-base">
       <i className={clx(`bi bi-${icon}`, "text-Accent")}></i>
 
       <p
