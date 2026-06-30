@@ -17,7 +17,7 @@ const SideMenu = (): React.ReactElement => {
     <div
       key={isFa ? "fa-menu" : "en-menu"}
       className={clx(
-        "bg-Secondary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit h-full flex flex-col justify-between transition-all duration-300 text-sm sm:text-base",
+        "bg-Secondary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit inset-0 min-h-dvh flex flex-col justify-between transition-all duration-300 text-sm sm:text-base",
         isFa ? "right-0 " : "left-0 ",
         isOpen
           ? "translate-x-0 opacity-100 visible"

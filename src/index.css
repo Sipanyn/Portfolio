@@ -1,4 +1,10 @@
 @import "tailwindcss";
+html,
+body,
+#root {
+  height: 100%;
+}
+
 @theme {
   --color-Primary-background: #0f172a;
   --color-Secondary-background: #1e293b;
