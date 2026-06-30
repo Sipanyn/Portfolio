@@ -4,6 +4,7 @@ import { useSidebarStore } from "@/stores/useSidebarStore";
 import { clx } from "@/utilities/clx";
 import i18n from "@/utilities/i18n/locales";
 import { useTranslation } from "react-i18next";
+import RotatingFlags from "../rotating-flags/rotating-flags";
 
 const Header = (): React.ReactElement => {
   const isOpen = useSidebarStore((s) => s.isOpen);
@@ -71,14 +72,7 @@ const Header = (): React.ReactElement => {
         )}
       >
         <p>{t("title")}</p>
-        <div className="relative size-5 group">
-          <svg className="size-5 absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-            <use href="icons/sprite.svg#heart-armenia" />
-          </svg>
-          <svg className="size-5 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <use href="icons/sprite.svg#heart-iran" />
-          </svg>
-        </div>
+        <RotatingFlags />
       </div>
     </header>
   );
