@@ -19,7 +19,7 @@ const Intro = (): React.ReactElement => {
         <p
           className={clx(
             "text-Accent  font-bold text-4xl sm:text-8xl animate-pulse [animation-duration:4s]",
-            isFa && "pr-10 sm:pr-14",
+            isFa && "pr-34 sm:pr-80",
           )}
         >
           {t("frontend")}
