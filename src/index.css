@@ -4,7 +4,12 @@ body,
 #root {
   height: 100%;
 }
-
+.BalooBhaijaan {
+  font-family: BalooBhaijaan;
+}
+.Nunito {
+  font-family: Nunito;
+}
 @theme {
   --color-Primary-background: #0f172a;
   --color-Secondary-background: #1e293b;

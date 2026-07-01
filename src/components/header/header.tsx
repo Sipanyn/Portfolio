@@ -4,7 +4,7 @@ import { useSidebarStore } from "@/stores/useSidebarStore";
 import { clx } from "@/utilities/clx";
 import i18n from "@/utilities/i18n/locales";
 import { useTranslation } from "react-i18next";
-import RotatingFlags from "../rotating-flags/rotating-flags";
+import RotatingFlags from "../base/rotating-flags/rotating-flags";
 
 const Header = (): React.ReactElement => {
   const isOpen = useSidebarStore((s) => s.isOpen);
