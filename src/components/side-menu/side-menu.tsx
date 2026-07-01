@@ -17,7 +17,7 @@ const SideMenu = (): React.ReactElement => {
     <div
       key={isFa ? "fa-menu" : "en-menu"}
       className={clx(
-        "bg-Primary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit inset-0 min-h-dvh flex flex-col justify-around transition-all duration-300 text-sm sm:text-base",
+        "bg-Primary-background/10  backdrop-blur-lg border border-white/10 absolute top-0 px-4 sm:px-14 py-7  w-[90%] sm:w-fit inset-0 min-h-dvh flex flex-col justify-evenly transition-all duration-300 text-sm sm:text-base",
         isFa ? "right-0 " : "left-0 ",
         isOpen
           ? "translate-x-0 opacity-100 visible"
@@ -27,7 +27,7 @@ const SideMenu = (): React.ReactElement => {
       )}
     >
       {/* Close Button */}
-      <div className="absolute left-2 top-3">
+      <div className={clx("absolute top-3", isFa ? "left-2" : "right-2")}>
         <button
           type="button"
           title="Close Menu"
