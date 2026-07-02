@@ -7,6 +7,7 @@ import Intro from "@/components/intro/intro";
 import SideMenu from "@/components/side-menu/side-menu";
 import { clx } from "@/utilities/clx";
 import i18n from "@/utilities/i18n/locales";
+import About from "@/components/about/about";
 
 const Home = (): React.ReactElement => {
   const isFa = i18n.language === "fa";
@@ -37,6 +38,9 @@ const Home = (): React.ReactElement => {
         >
           <Intro />
         </AnimatedContent>
+      </div>
+      <div className="absolute top-190 w-full">
+        <About />
       </div>
       <div className="relative z-10">
         <SideMenu />
