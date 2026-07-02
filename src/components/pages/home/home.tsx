@@ -1,3 +1,4 @@
+import AnimatedContent from "@/components/base/animated-content/animated-content";
 import styles from "./home.module.css";
 
 import Particles from "@/components/base/particles/particles";
@@ -22,7 +23,20 @@ const Home = (): React.ReactElement => {
             : "lg:left-60 md:left-30 left-5",
         )}
       >
-        <Intro />
+        <AnimatedContent
+          distance={200}
+          direction="vertical"
+          reverse={false}
+          duration={2}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0}
+        >
+          <Intro />
+        </AnimatedContent>
       </div>
       <div className="relative z-10">
         <SideMenu />
